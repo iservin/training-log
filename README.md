@@ -17,3 +17,7 @@ A set-by-set training log with progression coaching. This folder is the whole ap
 - Each phone or browser keeps its own log.
 - After the first visit it works offline. When you publish a new `index.html` the app updates itself the next time it is opened with a connection (close and reopen it once if you do not see the change).
 - To update: replace `index.html` and `sw.js` in the repository with the new copies and commit.
+
+## Releases
+- `RELEASE_NOTES.md` has the title and notes for this version. On GitHub, open **Releases → Draft a new release**, create the tag shown in the notes, use the first line as the release title and paste the rest as the description.
+- `CHANGELOG.md` keeps the short history, newest first.

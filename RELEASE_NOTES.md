@@ -1,49 +1,47 @@
-# v25.5: Conditioning blocks, cardio tracking, mobility and AMRAP
+# v27.5.1: Programs you can share, body log and compare, beginner help, and a smarter workout screen
 
-Tag: `v25.5` · 2026-11-11 · covers everything since the last GitHub export (v23, 2026-11-06): v24, v24.1, v24.2, v24.3, v25, v25.1, v25.2, v25.3, v25.3.1, v25.4, v25.4.1, v25.4.2 and v25.5.
+Tag: `v27.5.1` · 2026-11-13 · covers everything since the last GitHub export (v25.5, 2026-11-11): v25.6, v26, v26.1, v26.2, v26.3, v27, v27.1, v27.2, v27.3, v27.4, v27.5 and v27.5.1.
 
 ## What's new
 
-**Conditioning blocks**
-- Group exercises into a block: circuit, intervals, EMOM, AMRAP or steady-state. Each has its own logging card: Round done checks a whole round at the planned numbers, with rest guidance, countdowns and a 10-second warning for AMRAP.
-- Blocks are scored (rounds, rounds + reps, time) and the report shows a Blocks card with "better / same / down" against the last time. Coaching compares scores and tells you what to try next, with Apply to routine.
-- A routine or workout that is mostly block work reads "Conditioning" with its format, for example "Conditioning · AMRAP".
+**Programs for anyone, not just one block**
+- A new program menu: Blank program, Starter templates (Push / Pull / Legs, Upper / Lower, Full body, P7 with no weights, and a Knee-friendly legs program), Build a week for me, or Copy a folder.
+- A Block settings page: name, description, length in weeks, start date, weekly schedule and notes. Deloads are opt-in: turn them on and a deload week runs about half the working sets, two reps further from failure, at the same load.
+- Share a program as a file (JSON, or a simple CSV with one row per exercise) and import either from Program ▾ → Import a file. Files never carry workouts or start weights. Importing a newer version of a program you already have offers Update my copy, which keeps your own edits. A CSV template and your exercise list can be downloaded for filling in elsewhere.
+- First-run screens for new people, with no personal start weights in the public build.
+- For time blocks (rounds against a count-up clock with an optional cap; the finishing time is the score) join Circuit, Intervals, EMOM and AMRAP.
 
-**Cardio and conditioning tracking**
-- Calories is a fourth way to track a set, with sensible defaults for the rower, SkiErg, air bike and BikeErg.
-- Cardio sets get a second box (distance, minutes or calories, whichever suits the machine). History shows pace, speed and calories per minute.
-- Cardio is no longer a muscle group. A Style row (Cardio, Calisthenics, Strength, Olympic, Strongman, Jumps & Plyo and more, with sub-chips) replaces it, and each cardio movement loads the muscles it really works.
-- Analyze has a Lifting / Conditioning / Both switch, a Conditioning card, and a Last 72 h period.
-- Sleds, carries, swings and similar tagged lifts count once in Both, as lifting, and also appear under Conditioning.
-- Recent load: after heavy cardio the app notes which muscles are tired. A missed target within 48 hours of heavy cardio on that lift's main muscle is not counted towards a stall. This is the one progression rule that changed, and it only ever excuses a miss.
+**Easier for beginners**
+- Small ⓘ buttons next to labels across the app open a short plain-words sheet. Where the label is a choice (Style, Focus, block formats), the sheet shows every option side by side.
+- Help & glossary (Settings → Help, or See all terms on any sheet) lists every term with search. Explain as I go adds a one-line hint under each section; it is on for new users and off once you have a few workouts.
+- Folders and blocks are explained on the Program tab, with a nudge to set days and a start date.
+- Target muscles show their share of sets as you tap them (for example 40 / 25 / 20 / 15%) with an estimate of sets per muscle.
+- Exercise styles are grouped into four categories: Weight training, Calisthenics, Cardio & conditioning and Recovery. Each opens a second row (Muscle building, Powerlifting, Olympic, Strongman; Basics, Skills, Explosive, Jumps & throws; Cardio, Conditioning; Warm-up, Stretch, Release, Prehab). Every exercise is in at least one category.
+- The Exercises tab puts the ⓘ at the start of the muscle row, and search understands body-part words ("hips", "spine", "wrist", "ankle", "feet").
 
-**Warm-up, cool-down and mobility**
-- 54 new mobility movements (warm-up drills, stretches, releases) in a Mobility style with Warm-up / Stretch / Release sub-chips and a body-area row.
-- Routines can have an optional warm-up and cool-down block, with Settings defaults for new routines.
-- Warm up first (in the start window) and Add cool-down (in the finish window) each have their own screen and timer, with suggested drills matched to the muscles you are training. Drills never count towards volume, progression or Analyze, and the cool-down is not part of the session duration.
+**A smarter workout screen**
+- Substitute for today: swap a lift for one workout only when the equipment is taken, with an equivalent starting weight on other equipment. The routine and the original lift's progression are untouched.
+- Intensity techniques (Myo-Reps, Drop Set, Pause and more) show as a quiet tag on the routine list, the start preview and the live card, with a small marker on the set or sets they apply to.
+- Number pad: a unit key ("Use kg" in an lb setup, "In kg ✓" when on) types a weight in the other unit, rounded to the exercise's step. Next on the reps box checks the set off (using the plan's numbers if you typed nothing) and moves on to RIR; Settings → Number pad turns this off.
+- Cardio, such as an incline treadmill walk, can go in warm-ups and cool-downs, counts as conditioning minutes, and can open every suggested warm-up or cool-down.
+- An exercise added mid-workout lands right after the one you're on.
+- A Discard button beside Finish, with two confirmations.
 
-**Exercise library (629 movements)**
-- A clearer About and 3 to 6 steps for every movement, 56 new exercises including cardio and calisthenics progressions, kind and style tags, and seven duplicates folded away with their history kept.
+**Body log and Compare**
+- Log bodyweight, body fat %, waist and age (a Home card, a trend chart in Analyze, included in backup and restore). The newest weight and age feed "How you compare".
+- Compare two routines (sets per muscle with a radar overlay and two heat maps, movement patterns, equipment, rep zones, RIR, techniques, exercise differences, your results) or two blocks (the week as written plus what you actually did, with a three-line summary).
+- Exercise charts get a Block range with a block picker, block-scoped tiles including the change from first session to last, and markers where each block started on the All view.
 
-**Routine builder**
-- One-page builder: Style (Hypertrophy, Strength, Circuit, Conditioning), Time, Focus, and up to four target muscles. A results page with ⓘ, Swap, Remove, Regenerate, Save to folder, Save & edit and Start now.
-- "Go easy on muscles tired from recent cardio" switch.
-
-**Home, History and Analyze**
-- Consistency card ranges 1M / 3M / 6M / 1Y and a calendar with a dot per workout coloured by type, with a type filter.
-- History: month headers fold, search, and workout-type chips with counts.
-- Analyze: radar and heat map share one Muscles card.
-
-**Editing**
-- Apply and Save & close in the routine editor; Settings has a footer that is always there ("No changes" / Save & close).
-- A routine with an empty warm-up or cool-down offers Fill automatically, Turn off, or keep editing.
+**Exercise library (640 shown)**
+- Eleven new knees-over-toes movements (Backward Walk, Backward Sled Drag, Patrick Step, Poliquin Step-Up, ATG Split Squat, Slant-Board Squat, FHL Calf Raise, Standing Hip Flexor Raise, Elephant Walk, Pancake Stretch, Jefferson Curl) and Prehab tags on Nordics, Reverse Nordics, Sissy Squat, Peterson Step-Up, Couch Stretch and others. Search "KOT" or "ATG".
 
 ## Fixes
-- Steadier number pad: it stays open between boxes and no longer jumps the page.
-- Headers and footers sit flush with no see-through gap on desktop and phone.
-- Fixed a page that grew wider than the phone screen (long split-balance numbers, a long "Add a block" button).
+- The rest timer stops when the cool-down starts, and no rest starts after the final set of a workout.
+- The number pad no longer disappears when the screen redraws around a rest timer or a sync.
+- Workout dates and block ends are now correct across the November daylight-saving change.
+- Number pad Next now also checks the set when you accepted the plan's numbers (fixed in v27.5.1).
 
 ## Update notes
 - Your workouts stay on the device. Export a backup from Settings first if you want a copy.
 - To update: replace `index.html` and `sw.js` in the repository, commit, then close and reopen the app once with a connection.
-- Tested in Chromium (30 automated suites, all passing). Not yet tried on a real iPhone.
+- Tested in Chromium (42 automated suites, all passing). Not yet tried on a real iPhone.

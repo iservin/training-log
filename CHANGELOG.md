@@ -2,6 +2,30 @@
 
 Newest first. The full engineering log lives in the Claude project; this is the short version.
 
+## v29.2 (2026-11-15)
+**Shuffle for warm-ups and cool-downs.** A Shuffle button in the routine editor's warm-up and cool-down blocks, and on the warm-up / cool-down screen during a workout, redraws the drills from the best matches for the lifts (never more than two per body area, leaning away from drills in your last few sessions, and different from the ones showing). Saved blocks never change by themselves, and the automatic suggestion stays the same until you Shuffle. During a workout, drills with sets already done stay. **Technique markers.** Technique tags now read in short caps (MYO, DROP, RP, PART, PAUSE, NEG, MECH, TEMPO, HOLD), each in its own colour, in the workout, the routine list and the Start preview; set rows show a small coloured initial chip (M, D, R, P, N, T, H) on the set number, in the same colour as the tag, on the sets that technique applies to. Myo-reps and mechanical drop (both M) and pause and partials (both P) differ by colour. Tapping a tag explains it. Colours are checked for contrast in light and dark mode.
+
+## v29.1 (2026-11-14)
+Small fixes. **Next on a checked set** now walks that set's own boxes (weight → reps → RIR) before moving to the next unchecked set; it used to skip them. The number pad's **unit key works on distance boxes**: "Use mi" on a km box (and the reverse), "Use yd" on a metre box (and the reverse); km and mi convert to two decimals, m and yd to whole numbers. **Full-screen sheets stay on the bottom edge**: the workout report, the routine builder and its results page, the exercise sheet and the rest now share one shell (`fullShell`) that is sized from the visible screen height (`--apph`), re-measured on resize, rotation, coming back to the app and keyboard close, so the footer can no longer be left floating above the edge. New test suite e2e49 checks every full-screen sheet at several screen sizes, including after a stale height.
+
+## v29 (2026-11-14)
+One readout strip for every chart. A strip sits above the chart and shows the selected point or bar, so your thumb never covers it. Drag along the chart (or the date axis under it) to scrub, tap to pin, ✕ to clear. **Exercise chart**: date, weight × reps, est. 1RM, change vs the previous session, and "Past record". **Consistency 6M/1Y**: tap a week for its workouts, average session minutes and working sets, with **Open in calendar**. **Analyze → Session time**: the session's minutes against your target and working sets, with **Open report**. **Workout types** (monthly): workouts, average session and the split (top three plus other). **Body trend**: value, change since the previous entry and over 30 days.
+
+## v28.3 (2026-11-14)
+Results page footer: top row **Edit answers · Regenerate · Report**, bottom row **Save & fine-tune · Start now** (the ← back arrow stays; the summary line is plain text). Home → Consistency 1M/3M is now a calendar grid: one row per week, one column per weekday, month names down the side. New **Settings → Units → Week starts on** (Monday default, or Sunday); it applies to the grid, the calendar, This week, streaks, Analyze Week and volume. Block and deload weeks are unaffected. New test suite e2e47.
+
+## v28.2 (2026-11-14)
+Built-routine results page. "Change answers" is now **Edit answers**, the top button is a plain ← back arrow, and "Save & edit" is **Save & fine-tune** (saves, then opens the routine editor). A **Report** button in the summary line opens a mini report for the routine on screen: radar and front/back body map, sets per muscle group, the basics (time, exercises, working sets, warm-ups, rep zones, RIR), and **Against your block**, which shows your current block's week with and without this routine (working sets, minutes, sets per muscle, radar, body maps) plus the exercises it shares with each routine already in the block. It follows Swap, Remove and Add. New test suite e2e46.
+
+## v28.1 (2026-11-13)
+A short tour after the welcome screens: six steps on the real screens (Today, Program, Analyze, History, Exercises, Settings and help), with Back, Skip and Escape. Replay it from Settings → Help → Show the tour. The first workout shows a card on how logging works (boxes, Next checks the set, rest timer, Finish), once.
+
+## v28 (2026-11-13)
+Routine builder rework. Pick a split first (Push · Pull · Legs, Upper · Lower, Full body, Arnold split, Body part, or Individual muscles), then the day, then up to two of that day's muscles to emphasise; the day stays the day. Every Build is a fresh draw: Mix and New lean away from the routines it built for you recently, New also from your log and your programs, and Regenerate changes at least half the routine. Calisthenics progressions join the builder. New Add-ons: calisthenics (mixed into the lifts, or a block at the start or end), a core finisher (three-move circuit) and a conditioning finisher (intervals, EMOM, AMRAP or for time, 5–15 min), alongside cardio. A built 6-day week no longer repeats its first Push day as its second.
+
+## v27.6 (2026-11-13)
+The GitHub (public) copy starts with an empty program and a "Pick a program" card on Today instead of P7. The P7 template is now "Advanced PPL · 6-day", with no gym or personal names. The builder's Build button and the results page's buttons are a solid footer on the bottom edge. Swap in a built routine has "Choose any exercise…" (the library, opened on that muscle), and the results page has "Add an exercise".
+
 ## v27.5.1 (2026-11-13)
 Fix: Next on the reps box now also checks the set when you typed nothing and accepted the plan's numbers (the grey suggestion); it uses the planned weight and reps, as the tick does. In v27.5 it only worked when reps had been typed.
 

@@ -1,36 +1,32 @@
-# v29.2: Chart readouts, calendar-style consistency, week start, Shuffle and technique colours
+# v30.13: New body map, a settings hub, Home cards, new starter programs and reports
 
-Tag: `v29.2` · 2026-11-15 · covers everything since the last GitHub export (v28.1, 2026-11-14): v28.2, v28.3, v29, v29.1 and v29.2.
+Everything since v29.2 (2026-11-15). The app is the same single page; replace `index.html` and `sw.js` in your repository to update.
 
-## What's new
+## Body map and muscles
+- **A new body map** in Analyze and the workout report, drawn muscle by muscle. Tap any muscle for its sets and the exercises that worked it. The old flat "Classic" map is gone.
+- **21 muscles.** Neck now counts in Traps. **Hip Flexors** is a muscle of its own (the pelvis wedge and the strips down the thighs), so leg raises and knee drives no longer count as Quads.
+- **Small muscles count in their main muscle** (rotator cuff in rear delts, serratus in obliques, tibialis in calves). A new **Fine muscles** setting shows them as their own rows and radar axes.
+- **A clearer muscle radar:** short labels, coloured group bands (Chest, Shoulders, Back, Legs, Core, Arms) and a caption with the full name and sets when you tap an axis.
+- **Analyze opens faster** and the map no longer draws half a figure on first load.
 
-**Charts you can read with your thumb on them**
-- Every chart now has a **readout strip above it**, so nothing floats under your finger. Drag along the chart (or the date axis under it) to scrub, release to keep the point, ✕ to clear.
-- **Exercise chart:** date, the set behind the number (weight × reps and estimated 1RM), the change from the previous session, and Past record.
-- **Home → Consistency, 6M and 1Y:** tap a week for its workouts, average session length and working sets, with **Open in calendar**.
-- **Analyze → Session time:** tap a session for its minutes against your target and its working sets, with **Open report**.
-- **Analyze → Workout types:** tap a month for its workouts, average session and the split between types.
-- **Analyze → Body trend:** tap a point for the value, the change since the last entry and over 30 days.
+## Settings
+- **An iPhone-style Settings hub:** a list of General, Home, Program, Workout, Analyze, Exercises and Data, each with a one-line summary, a sub-page behind it, and a search box. A gear on every tab opens the matching page. Changes show at once and are kept when you tap Apply (Discard puts them back).
+- **Heat scale:** choose how many sets a week give full heat (8, 12, 16, 20 or your own number). Each program can have its own.
+- **Home cards:** show, hide and reorder the Home cards (drag or arrows), and choose what the Consistency chart opens on.
 
-**Calendar-style consistency and a choice of week start**
-- Home → Consistency (1M and 3M) now reads like a calendar: one row per week, one column per weekday, month names down the side. Tap a day for its report.
-- **Settings → Units → Week starts on:** Monday (the default) or Sunday. It applies to the grid, the calendar, This week, streaks, Analyze Week and weekly volume. Block and deload weeks are not affected.
+## Programs
+- **Three new starter templates:** Push / Pull / Legs · 3-day, Bro split · 5-day (chest, back, shoulders, legs, arms + core) and a Beginner PPL · 3-day built on machines, cables and dumbbells at an easy 2–3 reps in reserve. The original PPL is now "· 6-day".
+- **Avoid list.** A program can keep exercises out of suggestions. The Beginner PPL starts with one (deadlifts, barbell squat and overhead press, behind-the-neck work, upright rows, Olympic lifts and so on). Substitute and the routine builder skip those; if you pick one yourself you get a short note and it still works. Edit it in Block settings.
+- **Reports from the Program tab.** A Report item on every program and every routine, and a Report button inside the routine editor (it shows your unsaved changes). The routine report has sets, time, a radar, a body map and every exercise with its targets and your last result. The program report shows each routine, the week on the radar and map, sets per muscle and push / pull / legs balance.
 
-**Built routines**
-- The results page now has **Edit answers · Regenerate · Report** on the top row and **Save & fine-tune · Start now** below, with a ← back arrow at the top.
-- **Report** shows the routine on its own (muscle radar, front and back body map, sets per muscle, time, rep zones, RIR) and **Against your block**: your current block's week with and without the routine, the extra sets and minutes, and which exercises it shares with your existing routines.
-
-**Logging**
-- **Next on a checked set** now walks that set's own boxes (weight → reps → RIR) before moving on.
-- The number pad's unit key works on **distance** too: "Use mi" on a km box, "Use yd" on a metre box, and back.
-- **Shuffle** for warm-up and cool-down drills, in the routine editor and during a workout. It draws from the best matches for the day's lifts, avoids what you did recently, and keeps drills you've already started. The automatic suggestion stays put until you press it.
-- **Technique tags** read MYO, DROP, RP, PART, PAUSE, NEG, MECH, TEMPO and HOLD, each in its own colour, and the sets they apply to show a small coloured initial chip (M, D, R, P, N, T, H) on the set number. Tap a tag to see what it means.
+## Analyze
+- Where a block has a deload week, the plan on the radar and table is cut by the deload setting so a lighter week doesn't read as behind.
 
 ## Fixes
-- **Full-screen sheets** (workout report, routine builder and its results, exercise sheet) now share one layout sized to the visible screen, which re-measures after the browser bar or keyboard moves, so footers stay on the bottom edge.
+- **Workout report:** tapping a muscle, radar axis or table row no longer jumps to the top.
+- **Home block volume** now uses the muscle tag saved with each logged exercise, so renaming a tag or swapping an exercise no longer moves past weeks.
+- **Routine builder Time chips:** opening the custom "+" no longer leaves a preset highlighted (same rule for every chip row with a custom entry).
 
 ## Update notes
-- Your workouts stay on the device. Export a backup from Settings first if you want a copy.
-- Existing programs and settings are unchanged. Week start defaults to Monday.
-- To update: replace `index.html` and `sw.js` in the repository, commit, then close and reopen the app once with a connection.
-- Tested in Chromium (49 automated suites, all passing). Not yet tried on a real iPhone, so the footer fix in particular is worth a look on a phone.
+- Your data is untouched. Settings and programs from earlier versions load as before; a custom exercise saved with Neck or Hip Flexors as a fine muscle is converted on load.
+- Tested in Chromium, not on a real iPhone. Touch dragging of Home cards has arrow buttons as a fallback.
